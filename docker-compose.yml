@@ -1,15 +1,16 @@
 version: "3.9"
 services:
   api:
+    #image: ghcr.io/orphic-inc/stellar-api:latest
     build: ../api
     ports:
       - "4056:4056"
     env_file:
       - .env.api
   ui:
-    build:
-      context: ../ui
-      args:
-        STELLAR_API_URL: https://example.org/api
+    #image: ghcr.io/orphic-inc/stellar-ui:latest
+    build: ../ui
+    env_file:
+      - .env.ui
     ports:
       - "8081:80"
