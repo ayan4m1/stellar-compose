@@ -4,6 +4,13 @@ This is a Docker compose file which ties together the API and UI for Stellar.
 
 ## Quick Start
 
+Make sure you have the following installed and working:
+
+* Docker
+* Git
+
+The following commands will set up a new development environment using Docker.
+
     mkdir stellar
     cd stellar
     git clone https://github.com/orphic-inc/stellar-compose compose
@@ -13,11 +20,10 @@ This is a Docker compose file which ties together the API and UI for Stellar.
     mkdir -p volumes/db-data
     cd ../
 
-Now, edit `.env` and `.env.api` and replace all relevant configuration. Refer to UI/API documentation for documentation on the keys and values.
+Now, edit `.env.api` and replace all relevant configuration. Refer to [API](https://github.com/orphic-inc/stellar-api) documentation on the keys and values.
 
-    docker compose build
-    docker compose up -d
+    docker compose up --build -d
 
 ## Docker Images
 
-Tagged Docker images are not yet available.
+Tagged Docker images are not yet available. When they are, you will be able to comment/uncomment lines in `docker-compose.yml` to switch between built local images and tagged remote images.
