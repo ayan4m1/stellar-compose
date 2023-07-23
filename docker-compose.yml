@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  api:
+    build: ../api
+    ports:
+      - "4056:4056"
+    env_file:
+      - .env.api
+  ui:
+    build:
+      context: ../ui
+      args:
+        STELLAR_API_URL: https://example.org/api
+    ports:
+      - "8081:80"
