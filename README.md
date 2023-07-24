@@ -26,4 +26,4 @@ Now, edit `.env.api` and replace all relevant configuration. Refer to [API](http
 
 ## Docker Images
 
-Tagged Docker images are not yet available. When they are, you will be able to comment/uncomment lines in `docker-compose.yml` to switch between built local images and tagged remote images.
+If you would prefer to use a tagged image, comment/uncomment `build` and `image` lines in `docker-compose.yml` to switch between locally built and remotely downloaded images. The `latest` tag represents the `main` branch of each repo, and tagged versions are available by their version number, e.g. `v1.0.0`.
