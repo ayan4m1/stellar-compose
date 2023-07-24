@@ -20,7 +20,7 @@ The following commands will set up a new development environment using Docker.
     mkdir -p volumes/db-data
     cd ../
 
-Now, edit `.env.api` and replace all relevant configuration. Refer to [API](https://github.com/orphic-inc/stellar-api) documentation on the keys and values.
+Now, edit `.env.api` and replace all relevant configuration. Refer to [API](https://github.com/orphic-inc/stellar-api) documentation on the keys and values. Then, eedit `.env.ui` and do the same with the [UI](https://github.com/orphic-inc/stellar-api) documentation. Finally, run the following to start Stellar:
 
     docker compose up --build -d
 
