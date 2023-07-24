@@ -6,8 +6,8 @@ This is a Docker compose file which ties together the API and UI for Stellar.
 
 Make sure you have the following installed and working:
 
-* Docker
-* Git
+- Docker
+- Git
 
 The following commands will set up a new development environment using Docker.
 
@@ -18,7 +18,7 @@ The following commands will set up a new development environment using Docker.
     git clone https://github.com/orphic-inc/stellar-api.git api
     cd compose
 
-Now, edit `.env.api` and replace all relevant configuration. Refer to [API](https://github.com/orphic-inc/stellar-api) documentation on the keys and values. Then, eedit `.env.ui` and do the same with the [UI](https://github.com/orphic-inc/stellar-api) documentation. Finally, run the following to start Stellar:
+Now, edit `.env.api` and replace all relevant configuration. Refer to [API](https://github.com/orphic-inc/stellar-api) documentation on the keys and values. Then, edit `.env.ui` and do the same with the [UI](https://github.com/orphic-inc/stellar-api) documentation. Finally, run the following to start Stellar:
 
     docker compose up --build -d
 
