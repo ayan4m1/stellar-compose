@@ -3,14 +3,38 @@ services:
   api:
     #image: ghcr.io/orphic-inc/stellar-api:latest
     build: ../api
-    ports:
-      - "4056:4056"
+    restart: always
     env_file:
       - .env.api
+    depends_on:
+      - db
+    networks:
+      - internal
   ui:
     #image: ghcr.io/orphic-inc/stellar-ui:latest
     build: ../ui
+    restart: always
     env_file:
       - .env.ui
     ports:
-      - "8081:80"
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - api
+    networks:
+      - internal
+      - public
+    volumes:
+      - ./proxy.nginx.conf:/etc/nginx/nginx.conf:ro,Z
+  db:
+    image: mongo
+    restart: always
+    env_file:
+      - .env.db
+    networks:
+      - internal
+    volumes:
+      - ./volumes/db-data:/data/db
+networks:
+  public:
+  internal:
