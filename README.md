@@ -11,12 +11,8 @@ Make sure you have the following installed and working:
 
 The following commands will set up a new development environment using Docker.
 
-    mkdir stellar
+    git clone https://github.com/orphic-inc/stellar-compose stellar
     cd stellar
-    git clone https://github.com/orphic-inc/stellar-compose compose
-    git clone https://github.com/orphic-inc/stellar-ui.git ui
-    git clone https://github.com/orphic-inc/stellar-api.git api
-    cd compose
 
 Now, edit `.env.api` and replace all relevant configuration. Refer to [API](https://github.com/orphic-inc/stellar-api) documentation on the keys and values. Then, edit `.env.ui` and do the same with the [UI](https://github.com/orphic-inc/stellar-api) documentation. Finally, run the following to start Stellar:
 
