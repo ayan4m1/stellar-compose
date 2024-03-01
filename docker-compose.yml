@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   api:
-    #image: ghcr.io/orphic-inc/stellar-api:latest
+    image: ghcr.io/orphic-stellar-api:latest
     build: ./api
     restart: always
     env_file:
@@ -11,7 +11,7 @@ services:
     networks:
       - internal
   ui:
-    #image: ghcr.io/orphic-inc/stellar-ui:latest
+    image: ghcr.io/orphic/stellar-ui:latest
     build: ./ui
     restart: always
     env_file:
